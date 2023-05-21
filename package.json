@@ -5,6 +5,9 @@
   "scripts": {
     "build": "tsc"
   },
+  "files": [
+    "/build"
+  ],
   "repository": "https://github.com/DemonHa/p5-react",
   "license": "MIT",
   "devDependencies": {

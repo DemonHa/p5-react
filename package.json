@@ -1,0 +1,19 @@
+{
+  "name": "p5-react",
+  "version": "1.0.0",
+  "main": "build",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": "https://github.com/DemonHa/p5-react",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/p5": "^1.6.2",
+    "@types/react": "^18.2.6",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "p5": "^1.6.0",
+    "react": "^18.2.0"
+  }
+}

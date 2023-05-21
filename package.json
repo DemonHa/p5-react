@@ -1,6 +1,8 @@
 {
   "name": "p5-react",
   "version": "1.0.0",
+  "private": true,
+  "author": "DemonHa",
   "main": "build",
   "scripts": {
     "build": "tsc"

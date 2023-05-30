@@ -19,13 +19,12 @@ const Sketch = memo(({ className, style, setup, ...props }: SketchI) => {
 
   useEffect(() => {
     const sketch = new P5((p5: P5) => {
+      window.p5 = p5;
       props.sketch(p5);
       p5.setup = () => {
         setup(p5, containerRef.current!);
       };
     }, containerRef.current!);
-
-    window.p5 = sketch;
 
     return () => {
       sketch.remove();

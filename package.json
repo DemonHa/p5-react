@@ -1,11 +1,10 @@
 {
   "name": "p5-react",
   "version": "1.0.0",
-  "private": true,
   "author": "DemonHa",
   "main": "build",
   "scripts": {
-    "build": "tsc"
+    "build": "rm -rf ./build && tsc"
   },
   "files": [
     "/build"
@@ -18,7 +17,9 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "p5": "^1.6.0",
-    "react": "^18.2.0"
+    "p5": "^1.6.0"
+  },
+  "peerDependencies": {
+    "react": ">= 18.2.0"
   }
 }

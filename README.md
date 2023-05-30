@@ -37,4 +37,4 @@ const Component = () => {
 }
 ```
 
-Note:
+Note: You can access p5 globally from other modules

@@ -2,7 +2,7 @@
   "name": "p5-react",
   "version": "1.0.1",
   "author": "DemonHa",
-  "main": "build",
+  "main": "./build/index.js",
   "scripts": {
     "build": "rm -rf ./build && tsc",
     "test": "jest"

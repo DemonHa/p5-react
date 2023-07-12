@@ -2,6 +2,11 @@
 
 P5 wrapper for React.js application
 
+[![NPM Version](https://img.shields.io/npm/v/p5-react.svg?style=flat)]()
+[![NPM License](https://img.shields.io/npm/l/all-contributors.svg?style=flat)](https://github.com/DemonHa/p5-react/blob/main/LICENSE)
+[![npm downloads](https://img.shields.io/npm/dt/p5-react.svg)](https://www.npmjs.com/package/p5-react)
+![example workflow](https://github.com/DemonHa/p5-react/actions/workflows/test.yml/badge.svg)
+
 # Installation
 
 For npm users:
@@ -16,7 +21,7 @@ For yarn users:
 yarn add p5-react
 ```
 
-Usage
+# Usage
 
 ```typescript
 import P5 from "p5";
@@ -32,7 +37,7 @@ const sketch = (p5: P5) => {
     }
 }
 
-const Component = () => {
+export default () => {
     return <Sketch setup={setup} sketch={sketch}>
 }
 ```

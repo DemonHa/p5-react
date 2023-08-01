@@ -21,25 +21,27 @@ For yarn users:
 yarn add p5-react
 ```
 
-# Usage
+# Quick Start
 
 ```typescript
 import P5 from "p5";
-import { Sketch } from "p5-react";
+import Sketch from "p5-react";
 
 const setup = (p5: P5, canvasRef: HTMLDivElement) => {
-    p5.createCanvas(500, 500).parent(canvasParentRef);
-}
+  p5.createCanvas(500, 500).parent(canvasRef);
+};
 
 const sketch = (p5: P5) => {
-    p5.draw = () => {
-        // Draw
-    }
-}
+  p5.draw = () => {
+    // Draw
+  };
+};
 
-export default () => {
-    return <Sketch setup={setup} sketch={sketch}>
-}
+const App = () => {
+  return <Sketch setup={setup} sketch={sketch} />;
+};
+
+export default App;
 ```
 
 Note: You can access p5 globally from other modules

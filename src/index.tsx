@@ -7,20 +7,21 @@ declare global {
   }
 }
 
-interface SketchI {
-  className?: string;
-  style?: React.CSSProperties;
+type SketchI = {
   sketch: (...args: any[]) => any;
   setup: (p5: P5, containerRef: HTMLDivElement) => void;
-}
+} & React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+>;
 
-const Sketch = memo(({ className, style, setup, ...props }: SketchI) => {
+const Sketch = memo(({ sketch: propSketch, setup, ...props }: SketchI) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const sketch = new P5((p5: P5) => {
       window.p5 = p5;
-      props.sketch(p5);
+      propSketch(p5);
       p5.setup = () => {
         setup(p5, containerRef.current!);
       };
@@ -31,9 +32,7 @@ const Sketch = memo(({ className, style, setup, ...props }: SketchI) => {
     };
   }, []);
 
-  return (
-    <div ref={containerRef} style={style} className={className ?? ""}></div>
-  );
+  return <div ref={containerRef} {...props} />;
 });
 
 export default Sketch;
